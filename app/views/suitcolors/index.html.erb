@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Suitcolors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suitcolors.each do |suitcolor| %>
+      <tr>
+        <td><%= suitcolor.title %></td>
+        <td><%= suitcolor.description %></td>
+        <td><%= link_to 'Show', suitcolor %></td>
+        <td><%= link_to 'Edit', edit_suitcolor_path(suitcolor) %></td>
+        <td><%= link_to 'Destroy', suitcolor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Suitcolor', new_suitcolor_path %>

@@ -1,0 +1,30 @@
+<%= form_with(model: suitcolor) do |form| %>
+  <% if suitcolor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(suitcolor.errors.count, "error") %> prohibited this suitcolor from being saved:</h2>
+
+      <ul>
+        <% suitcolor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :main_image %>
+    <%= form.file_field :main_image %>
+  </div>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @suitdesign.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @suitdesign.description %>
+</p>
+<p>
+  <%= image_tag(@suitdesign.main_image, :size => "260x180") %>
+</p>
+<%= link_to 'Edit', edit_suitdesign_path(@suitdesign) %> |
+<%= link_to 'Back', suitdesigns_path %>
